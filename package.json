@@ -1,0 +1,30 @@
+{
+  "name": "the-typing-guy",
+  "version": "1.0.0",
+  "description": "typing interesting things to reach 100 WPM",
+  "keywords": [
+    "typing",
+    "typing-practice",
+    "wpm",
+    "typing-challenge",
+    "productivity"
+  ],
+  "author": "The Typing Guy",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "dev": "http-server -c-1",
+    "serve": "http-server -p 8000"
+  },
+  "homepage": "https://github.com/username/the-typing-guy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/the-typing-guy.git"
+  },
+  "devDependencies": {
+    "http-server": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
