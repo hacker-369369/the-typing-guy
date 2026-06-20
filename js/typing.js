@@ -53,9 +53,7 @@ class TypingSession {
         this.newRecordBanner = document.getElementById('new-record-banner');
         this.finalWpm = document.getElementById('final-wpm');
         this.finalAccuracy = document.getElementById('final-accuracy');
-        this.finalTime = document.getElementById('final-time');
-        this.finalCharacters = document.getElementById('final-characters');
-        this.finalWords = document.getElementById('final-words');
+       
         this.finalPersonalBest = document.getElementById('final-personal-best');
     }
 
@@ -259,7 +257,7 @@ class TypingSession {
                 const wrongSound = document.getElementById('wrongSound');
                 if (wrongSound) {
                     wrongSound.currentTime = 0;
-                    wrongSound.volume = 0.5; // <-- ADDED THIS LINE HERE
+                    wrongSound.volume = 0.1; // <-- ADDED THIS LINE HERE
                     wrongSound.play().catch(error => console.log("Audio play failed:", error));
                 }
             } else {
@@ -267,7 +265,7 @@ class TypingSession {
                 const keySound = document.getElementById('keySound');
                 if (keySound) {
                     keySound.currentTime = 0; // Rewind to start for fast typing
-                    keySound.volume = 0.6;    // Optional: make normal typing slightly quieter
+                    keySound.volume = 1;    // Optional: make normal typing slightly quieter
                     keySound.play().catch(error => console.log("Audio play failed:", error));
                 }
             }
@@ -404,9 +402,7 @@ class TypingSession {
         // Update results display
         this.finalWpm.textContent = `${stats.wpm} WPM`;
         this.finalAccuracy.textContent = `${stats.accuracy}%`;
-        this.finalTime.textContent = TimeUtils.formatTime(stats.time);
-        this.finalCharacters.textContent = stats.characters;
-        this.finalWords.textContent = stats.words;
+      
 
         // Show personal best
         if (this.personalBest) {
