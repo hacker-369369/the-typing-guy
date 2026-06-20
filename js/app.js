@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class HomePage {
@@ -135,7 +134,6 @@ if (document.readyState === 'loading') {
     const app = new HomePage();
     app.init();
 }
-=======
 
 
 class HomePage {
@@ -272,4 +270,3 @@ if (document.readyState === 'loading') {
     const app = new HomePage();
     app.init();
 }
->>>>>>> aa67f116b3e3af53a493d0d40d516178b20d1582
