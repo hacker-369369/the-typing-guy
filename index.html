@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Typing Guy - Typing interesting things daily. Practice typing with daily paragraphs about movies, AI, psychology, business, and more.">
+    <meta name="theme-color" content="#0F1117">
+    <title>The Typing Guy</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/my-logo.png" alt="Logo" style="height: 50px; width: auto;">
+                    <span>The Typing Guy</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-title-container">
+                    <h1 class="hero-title">The Typing Guy</h1>
+                    <h2 class="tagline">Can you read it before I finish typing?</h2>
+                </div>
+                <p class="hero-subtitle">
+🎬 Movies.
+
+🧠 Psychology
+
+🤖 AI
+
+📚 History
+
+💭 Opinions
+
+                </p>
+            </div>
+        </section>
+
+        <!-- Days Grid -->
+        <main class="container">
+            <section class="days-section">
+                <div id="loading-state" class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Loading typing challenges...</p>
+                </div>
+
+                <div id="error-state" class="error-state" style="display: none;">
+                    <p>❌ Unable to load days. Please refresh the page.</p>
+                </div>
+
+                <div id="empty-state" class="empty-state" style="display: none;">
+                    <p>No typing challenges available yet. Check back soon!</p>
+                </div>
+
+                <div id="days-grid" class="days-grid">
+                    <!-- Days will be loaded here by JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 The Typing Guy. Made with ⌨️</p>
+        </footer>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
