@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -187,3 +188,194 @@
     <audio id="keySound" src="assets/key-sound.wav" preload="auto"></audio>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F1117">
+    <title>Day - The Typing Guy</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/my-logo.png" alt="Logo" style="height: 50px; width: auto;">
+                    <span>The Typing Guy</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container day-container">
+            <!-- Loading State -->
+            <div id="loading-state" class="loading-state" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading challenge...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-state" class="error-state" style="display: none;">
+                <p>❌ Unable to load this challenge. <a href="index.html">Back to home</a></p>
+            </div>
+
+            <!-- Day Header -->
+            <div id="day-header" class="day-header">
+                <div class="day-header-top">
+                    <h1 id="day-title" class="day-title"></h1>
+                    <div class="day-meta">
+                        <span class="day-number"></span>
+                        <span class="category-badge"></span>
+                        <span class="date-display"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hook Section -->
+            <div id="hook-section" class="hook-section">
+                <p id="hook-text" class="hook-text"></p>
+                <div class="hook-stats">
+                    <div class="hook-stat">
+                        <span class="hook-stat-label">Personal Best:</span>
+                        <span id="hook-pb" class="hook-stat-value">--</span>
+                    </div>
+                    <div class="hook-stat">
+                        <span class="hook-stat-label">Goal:</span>
+                        <span class="hook-stat-value">100 WPM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Interface -->
+            <section id="typing-interface" class="typing-interface">
+                <!-- Pre-typing content -->
+                <div id="pre-typing-section" class="pre-typing-section">
+                    <div class="paragraph-preview">
+                        <p id="paragraph-preview-text"></p>
+                    </div>
+                    <button id="start-button" class="start-button">Start Typing</button>
+                </div>
+
+                <!-- Countdown -->
+                <div id="countdown-section" class="countdown-section" style="display: none;">
+                    <div class="countdown">
+                        <span id="countdown-number">3</span>
+                    </div>
+                </div>
+
+                <!-- Active typing -->
+                <div id="typing-section" class="typing-section" style="display: none;">
+                    <!-- Paragraph Display -->
+                    <div class="paragraph-container">
+                        <div id="paragraph-text" class="paragraph-text">
+                            <!-- Characters will be rendered here -->
+                        </div>
+
+                        <!-- Live Stats -->
+                        <div class="stats-panel stats-panel-active">
+                            <div class="stat-item">
+                                <span class="stat-label">WPM</span>
+                                <span id="wpm-display" class="stat-value">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Accuracy</span>
+                                <span id="accuracy-display" class="stat-value">100%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Progress</span>
+                                <span id="progress-display" class="stat-value">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Time</span>
+                                <span id="timer-display" class="stat-value">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Input -->
+                    <input
+                        type="text"
+                        id="typing-input"
+                        class="typing-input"
+                        placeholder="Start typing..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div id="progress-bar" class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="progress-text" id="progress-text">0%</div>
+                    </div>
+                </div>
+
+                <!-- Results Screen -->
+                <div id="results-section" class="results-section" style="display: none;">
+                    <div class="results-container">
+                        <div class="results-header">
+                            <h2>Challenge Completed</h2>
+                            <div id="new-record-banner" class="new-record-banner" style="display: none;">
+                                 NEW PERSONAL BEST! 
+                            </div>
+                        </div>
+
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <span class="result-label">Final WPM</span>
+                                <span id="final-wpm" class="result-value">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Accuracy</span>
+                                <span id="final-accuracy" class="result-value">0%</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Time</span>
+                                <span id="final-time" class="result-value">0:00</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Characters</span>
+                                <span id="final-characters" class="result-value">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Words</span>
+                                <span id="final-words" class="result-value">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Personal Best</span>
+                                <span id="final-personal-best" class="result-value">--</span>
+                            </div>
+                        </div>
+
+                        <div class="results-actions">
+                            <button id="retry-button" class="action-button primary">Try Again</button>
+                            <button id="home-button" class="action-button secondary">Back to Home</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 The Typing Guy. Made with ⌨️</p>
+        </footer>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/typing.js"></script>
+    <audio id="wrongSound" src="assets/wrong-sound.mp3" preload="auto"></audio>
+    <audio id="keySound" src="assets/key-sound.wav" preload="auto"></audio>
+</body>
+</html>
+>>>>>>> aa67f116b3e3af53a493d0d40d516178b20d1582
