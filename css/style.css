@@ -1,9 +1,9 @@
 
 /* CSS Variables */
 :root {
-    --bg-primary: #0B0E14;      /* Deep Navy Background */
-    --bg-secondary: #1A1D24;    /* Elevated Slate Cards */
-    --text-primary: #F8FAFC;    /* Near-White text */
+    --bg-primary: #FC0000;      /* Red Background */
+    --bg-secondary: #FC0000;    /* Red Cards */
+    --text-primary: #FFFFFF;    /* White text */
     --text-upcoming: #64748B;   /* Professional Muted Grey */
     --accent-current: #3B82F6;  /* Electric Blue for main logo/actions */
     --accent-wrong: #EF4444;    /* Modern Alert Red */
@@ -504,9 +504,9 @@ body {
 }
 
 .paragraph-preview p {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.8;
-    color: var(--text-primary);
+    color: #000000;
     font-weight: 400;
     letter-spacing: 0.2px;
     font-family: 'JetBrains Mono', monospace;
@@ -574,12 +574,12 @@ body {
 }
 
 .paragraph-text {
-    font-size: clamp(1.2rem, 3vw, 1.8rem); /* Reduced from 2rem-3rem */
+    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Reduced from 2rem-3rem */
     line-height: 1.6;                      /* Slightly tighter line height */
     word-spacing: 0.1em;
     letter-spacing: 0.02em;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 600;
+    font-family: 'Impact', sans-serif;
+    font-weight: 400;
     flex: 1;
     overflow-y: auto;
     padding-right: 0.5rem;
@@ -590,23 +590,24 @@ body {
     position: relative;
     transition: color var(--transition-timing), background-color 50ms linear;
     display: inline;
-    font-weight: 600;
-    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-family: 'Impact', sans-serif;
+    color: #000000;
 }
 
 .character.correct {
-    color: var(--text-primary);
+    color: #FFFFFF;
 }
 
 .character.incorrect {
-    color: var(--accent-wrong);
+    color: #000000;
     background-color: rgba(255, 82, 82, 0.2);
 }
 
 .character.current {
-    color: var(--accent-current);
+    color: #000000;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(255, 213, 79, 0.5), 0 0 20px rgba(255, 213, 79, 0.2);
+    text-shadow: none;
     animation: blink 1s ease-in-out infinite;
 }
 
@@ -620,7 +621,7 @@ body {
 }
 
 .character.upcoming {
-    color: var(--text-upcoming);
+    color: #000000;
 }
 
 /* Hidden Input */
